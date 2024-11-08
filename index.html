@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The end</title>
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-black z-50">
+        <div class="text-center py-2 text-sm text-white">
+            *Frete grátis para todo Brasil em compras acima de R$499
+        </div>
+        <div class="flex justify-between items-center py-4 px-8">
+            <div class="flex-grow text-center">
+                <img alt="Logo" class="mx-auto" height="50" src="./assets/logo.png" width="100"/>
+            </div>
+            <!-- Botão hamburguer -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white p-2 rounded-full border border-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menu de navegação -->
+        <nav id="navbar" class="hidden md:flex justify-center space-x-8 py-4 text-white">
+            <a href="#">EVANGELION</a>
+            <a href="#">BERSERK</a>
+            <a href="#">TOKYO GHOUL</a>
+            <a href="#">MOLETOM</a>
+        </nav>
+    </header>
+
+    <!-- Carrossel -->
+    <section id="carrossel">
+        <div class="slider">
+            <div class="slides">
+                <img src="./assets/ehe.png" alt="Banner 1">
+                <img src="./assets/kaneki.jpg" alt="Banner 2">
+                <img src="./assets/uravel.png" alt="Banner 3">
+            </div>
+            <div class="carousel-controls">
+                <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+                <span class="next" onclick="changeSlide(1)">&#10095;</span>
+            </div>
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="section-produtos">
+        <h2>Produtos</h2>
+        <div class="product-grid">
+            <!-- Adicione os produtos aqui -->
+            <div class="product-card">
+                <img src="./image/eva01.jpeg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>R$ 199,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/eva02.jpeg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>R$ 179,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/eva03.jpeg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>R$ 199,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/eva04.jpeg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>R$ 179,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/tokyo01.jpeg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>R$ 199,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/tokyo02.jpeg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>R$ 179,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/moletom_tokyo.jpeg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>R$ 199,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/berserk01.jpeg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>R$ 179,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais produtos conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AlternaZero. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
