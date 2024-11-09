@@ -11,16 +11,23 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-black z-50">
-        <div class="text-center py-2 text-sm text-white">
-            *Frete grátis para todo Brasil em compras acima de R$499
-        </div>
+    <header class="fixed top-0 left-0 right-0 bg-black z-50 shadow-lg">
         <div class="flex justify-between items-center py-4 px-8">
-            <div class="flex-grow text-center">
-                <img alt="Logo" class="mx-auto" height="50" src="./assets/logo.png" width="100"/>
+            <!-- Logo no centro -->
+            <div class="flex-grow text-center order-2">
+                <div class="flex items-center justify-center">
+                    <input class="bg-black border border-white text-white px-4 py-2 rounded-l-md focus:outline-none w-2/3 sm:w-auto" placeholder="O que você está buscando?" type="text" />
+                    <button class="bg-black border border-white text-white px-4 py-2 rounded-r-md"><i class="fas fa-search"></i></button>
+                </div>
+                <img alt="Logo" class="mx-auto logo" height="50" src="./assets/logo.png" width="100" />
+            </div>
+            <!-- Ícones de usuário e carrinho -->
+            <div class="hidden md:flex items-center space-x-4 order-1">
+                <i class="fas fa-user text-white"></i>
+                <i class="fas fa-shopping-bag text-white"></i>
             </div>
             <!-- Botão hamburguer -->
-            <div class="md:hidden">
+            <div class="md:hidden order-3">
                 <button id="menu-toggle" class="text-white p-2 rounded-full border border-white">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -28,10 +35,10 @@
         </div>
         <!-- Menu de navegação -->
         <nav id="navbar" class="hidden md:flex justify-center space-x-8 py-4 text-white">
-            <a href="#">EVANGELION</a>
-            <a href="#">BERSERK</a>
-            <a href="#">TOKYO GHOUL</a>
-            <a href="#">MOLETOM</a>
+            <a href="#eva">EVANGELION</a>
+            <a href="#berserk">BERSERK</a>
+            <a href="#tokyo">TOKYO GHOUL</a>
+            <a href="#castelvania">MOLETOM</a>
         </nav>
     </header>
 
@@ -39,9 +46,10 @@
     <section id="carrossel">
         <div class="slider">
             <div class="slides">
-                <img src="./assets/ehe.png" alt="Banner 1">
-                <img src="./assets/kaneki.jpg" alt="Banner 2">
-                <img src="./assets/uravel.png" alt="Banner 3">
+                <img src=".//assets/banner_tokyo.png" alt="Banner 1">
+                <img src="./assets/banner_eva.png" alt="Banner 2">
+                <img src="./assets/banner_berserk.png" alt="Banner 3">
+                <img src="./assets/castelvania.png" alt="Banner 4">
             </div>
             <div class="carousel-controls">
                 <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
@@ -51,60 +59,37 @@
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="produtos" class="section-produtos">
-        <h2>Produtos</h2>
+    <!--EVA-->
+    <section id="produtos_eva" class="section-produtos" >
+        <h2 id="eva">EVANGELION</h2>
         <div class="product-grid">
             <!-- Adicione os produtos aqui -->
             <div class="product-card">
                 <img src="./image/eva01.jpeg" alt="Produto 1">
-                <h3>Produto 1</h3>
+                <h3>ASUKA & REI</h3>
                 <p>R$ 199,99</p>
                 <button>Adicionar ao Carrinho</button>
             </div>
             <div class="product-card">
                 <img src="./image/eva02.jpeg" alt="Produto 2">
-                <h3>Produto 2</h3>
+                <h3>EVA 01</h3>
                 <p>R$ 179,99</p>
                 <button>Adicionar ao Carrinho</button>
             </div>
             <div class="product-card">
                 <img src="./image/eva03.jpeg" alt="Produto 1">
-                <h3>Produto 1</h3>
+                <h3>ASUKA NEON</h3>
                 <p>R$ 199,99</p>
                 <button>Adicionar ao Carrinho</button>
             </div>
             <div class="product-card">
                 <img src="./image/eva04.jpeg" alt="Produto 2">
-                <h3>Produto 2</h3>
-                <p>R$ 179,99</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product-card">
-                <img src="./image/tokyo01.jpeg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>R$ 199,99</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product-card">
-                <img src="./image/tokyo02.jpeg" alt="Produto 2">
-                <h3>Produto 2</h3>
-                <p>R$ 179,99</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product-card">
-                <img src="./image/moletom_tokyo.jpeg" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>R$ 199,99</p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product-card">
-                <img src="./image/berserk01.jpeg" alt="Produto 2">
-                <h3>Produto 2</h3>
+                <h3>EVA GROUP</h3>
                 <p>R$ 179,99</p>
                 <button>Adicionar ao Carrinho</button>
             </div>
@@ -112,15 +97,189 @@
         </div>
     </section>
 
+    <!--TOKYO-->
+    <section id="tokyo" id="produtos" class="section-produtos">
+        <h2 >TOKYO GHOUL</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./image/moletom_tokyo.jpeg" alt="Produto 1">
+                <h3>KANEKI MOLETOM</h3>
+                <p>R$ 199,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/tokyo01.jpeg" alt="Produto 2">
+                <h3>ANTEIKU</h3>
+                <p>R$ 179,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/tokyo03.jpeg" alt="Produto 2">
+                <h3>VERSE</h3>
+                <p>R$ 179,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./image/tokyo04.jpeg" alt="Produto 2">
+                <h3>GANG</h3>
+                <p>R$ 179,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+    </div>
+</section>
+<!--BERSERK-->
+<section id="berserk" id="produtos" class="section-produtos">
+    <h2>BERSERK</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="./image/berserk01.jpeg" alt="Produto 1">
+            <h3>GUTS</h3>
+            <p>R$ 199,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./image/berserk02.jpeg" alt="Produto 2">
+            <h3>BERSERKER</h3>
+            <p>R$ 179,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./image/berserk03.jpeg" alt="Produto 2">
+            <h3>Knight</h3>
+            <p>R$ 179,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./image/berserk04.jpeg" alt="Produto 2">
+            <h3>SWORD</h3>
+            <p>R$ 179,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+</div>
+</section>
+<!--CASTELVANIA-->
+<section id="produtos" class="section-produtos">
+    <h2 id="castelvania">CASTELVANIA</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="./image/Castlevania_01.png" alt="Produto 1">
+            <h3>RED BAT</h3>
+            <p>R$ 199,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./image/Castlevania_02.png" alt="Produto 2">
+            <h3>RED CASTLE</h3>
+            <p>R$ 179,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./image/Castlevania_03.png" alt="Produto 2">
+            <h3>ALUCARD</h3>
+            <p>R$ 179,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./image/Castlevania_04.png" alt="Produto 2">
+            <h3>DRACULA</h3>
+            <p>R$ 179,99</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+</div>
+</section>
+
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 AlternaZero. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">Facebook</a>
-                <a href="#" target="_blank">Twitter</a>
-                <a href="#" target="_blank">GitHub</a>
+    <div class="container mx-auto py-12">
+        <div class="flex justify-center items-center space-x-4">
+            <button class="text-2xl">&lt;</button>
+            <div class="flex space-x-8">
+                <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-bold">L</div>
+                    </div>
+                    <p class="text-gray-600 mb-2">por Larissa Bilak no T-Shirt Oversized Marés da Redenção</p>
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Perfeito!</h3>
+                    <p class="text-gray-600">É linda demais! Cor bem viva e material muito bom e confortável. Comprei pro meu namorado de aniversário e tenho certeza que ele vai amarrarrrrrr Aliás, veio muito cheirosa!! A sacolinha e os cartões também são mt bonitos Atendimento ótimo! Obrigada :)</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-bold">R</div>
+                    </div>
+                    <p class="text-gray-600 mb-2">por Rafael no T-Shirt Oversized Stage 6</p>
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Impactante!</h3>
+                    <p class="text-gray-600">Se superando a cada novo drop, uma obra de arte atrás de outra, o carinho que é entregue em cada peça é visível em todos os detalhes!</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-bold">G</div>
+                    </div>
+                    <p class="text-gray-600 mb-2">por Gabriel Guimarães no Manga Longa Linhagem Amaldiçoada</p>
+                    <div class="flex justify-center mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Surreal</h3>
+                    <p class="text-gray-600">Esta foi minha primeira peça da Alternazero, e eu não poderia ter ficado com uma impressão melhor da loja, a camiseta tem um material ótimo, ela é bem quentinha e a estampa é SURREAL de linda, o fato do produto ser estampado por todos os lados é algo a se considerar de verdade quando se fala sobre preço. Dificilmente é possível encontrar uma peça com tamanha qualidade</p>
+                </div>
+            </div>
+            <button class="text-2xl">&gt;</button>
+        </div>
+    </div>
+    <footer class="bg-white py-8">
+        <div class="container mx-auto flex justify-between">
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-600"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-600"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-600"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="text-gray-600"><i class="fas fa-times"></i></a>
+                <a href="#" class="text-gray-600"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <div class="flex space-x-16">
+                <div>
+                    <h3 class="text-gray-800 font-bold mb-4">CATEGORIAS</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>DROP STAGE 6</li>
+                        <li>DROP TRINDADE</li>
+                        <li>VAMPIRE ERA</li>
+                        <li>ROUPAS</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-800 font-bold mb-4">INFORMAÇÃO</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>Contato</li>
+                        <li>Política de Trocas & Devoluções</li>
+                        <li>Termos de Uso</li>
+                        <li>Como cuidar da sua peça</li>
+                        <li>Como medir</li>
+                        <li>Conhecendo Alternazero</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-800 font-bold mb-4">ENTRE EM CONTATO</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>5521995500104</li>
+                        <li>+55 21 98124-9332</li>
+                        <li>contato@alternazero.com</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
